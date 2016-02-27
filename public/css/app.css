@@ -3011,3 +3011,21 @@ body {
   width: 60px;
   border-radius: 50%;
   background-size: 60px; }
+
+.event {
+  background: #EB6C65;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: #FDFCFE; }
+  .event .event_header {
+    background: #FEA29D;
+    border-radius: 5px 5px 0px 0px;
+    min-height: 80px;
+    padding-left: 25px;
+    padding-top: 40px;
+    font-size: 24px; }
+  .event .event_body {
+    padding-left: 25px;
+    padding-top: 40px;
+    font-size: 18px;
+    padding-bottom: 40px; }

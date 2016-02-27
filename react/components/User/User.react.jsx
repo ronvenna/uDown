@@ -3,9 +3,9 @@ import React from 'react';
 class User extends React.Component {
 
   render() {
-    var teamName = "Strongpoop"
-    var userName = "Jane Gonzales"
-    var userImage = "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg"
+    let teamName = "Strongpoop"
+    let userName = "Jane Gonzales"
+    let userImage = "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg"
 
     return (
       <div className="navbar-right user">

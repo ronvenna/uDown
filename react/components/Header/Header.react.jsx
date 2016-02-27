@@ -11,7 +11,6 @@ class Header extends React.Component {
             <Logo />
           </div>
         </div>
-
         <User />
       </nav>
     )

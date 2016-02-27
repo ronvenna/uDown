@@ -8,7 +8,7 @@ var Main = React.createFactory(require('./react/components/Main.react.jsx'));
 
 ReactDOM.render(React.createElement(Main, null), document.getElementById('example'));
 
-},{"./react/components/Main.react.jsx":162,"react":159,"react-dom":30}],2:[function(require,module,exports){
+},{"./react/components/Main.react.jsx":164,"react":159,"react-dom":30}],2:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19041,6 +19041,115 @@ module.exports = validateDOMNesting;
 module.exports = require('./lib/React');
 
 },{"./lib/React":54}],160:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var EventCard = function (_React$Component) {
+  _inherits(EventCard, _React$Component);
+
+  function EventCard() {
+    _classCallCheck(this, EventCard);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(EventCard).apply(this, arguments));
+  }
+
+  _createClass(EventCard, [{
+    key: "render",
+    value: function render() {
+      var eventName = "Lunch";
+      var eventTime = "8pm";
+      var eventLocation = "Chipotle";
+
+      return _react2.default.createElement(
+        "div",
+        { className: "event" },
+        _react2.default.createElement(
+          "div",
+          { className: "event_header" },
+          eventName + " - " + eventTime + " | " + eventLocation
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "event_body" },
+          _react2.default.createElement(
+            "p",
+            null,
+            "Who's down?"
+          )
+        )
+      );
+    }
+  }]);
+
+  return EventCard;
+}(_react2.default.Component);
+
+exports.default = EventCard;
+
+},{"react":159}],161:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _EventCardReact = require('./EventCard.react.jsx');
+
+var _EventCardReact2 = _interopRequireDefault(_EventCardReact);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Main = function (_React$Component) {
+  _inherits(Main, _React$Component);
+
+  function Main() {
+    _classCallCheck(this, Main);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(Main).apply(this, arguments));
+  }
+
+  _createClass(Main, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'column is-4 is-offset-4' },
+        _react2.default.createElement(_EventCardReact2.default, null)
+      );
+    }
+  }]);
+
+  return Main;
+}(_react2.default.Component);
+
+module.exports = Main;
+
+},{"./EventCard.react.jsx":160,"react":159}],162:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19103,7 +19212,7 @@ var Header = function (_React$Component) {
 
 exports.default = Header;
 
-},{"../Logo/Logo.react.jsx":161,"../User/User.react.jsx":163,"react":159}],161:[function(require,module,exports){
+},{"../Logo/Logo.react.jsx":163,"../User/User.react.jsx":165,"react":159}],163:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19154,7 +19263,7 @@ var Logo = function (_React$Component) {
 
 exports.default = Logo;
 
-},{"react":159}],162:[function(require,module,exports){
+},{"react":159}],164:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -19166,6 +19275,10 @@ var _react2 = _interopRequireDefault(_react);
 var _HeaderReact = require('./Header/Header.react.jsx');
 
 var _HeaderReact2 = _interopRequireDefault(_HeaderReact);
+
+var _EventListReact = require('./Events/EventList.react.jsx');
+
+var _EventListReact2 = _interopRequireDefault(_EventListReact);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19189,8 +19302,13 @@ var Main = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement(_HeaderReact2.default, null)
+        { className: '' },
+        _react2.default.createElement(_HeaderReact2.default, null),
+        _react2.default.createElement(
+          'div',
+          { className: 'columns' },
+          _react2.default.createElement(_EventListReact2.default, null)
+        )
       );
     }
   }]);
@@ -19200,7 +19318,7 @@ var Main = function (_React$Component) {
 
 module.exports = Main;
 
-},{"./Header/Header.react.jsx":160,"react":159}],163:[function(require,module,exports){
+},{"./Events/EventList.react.jsx":161,"./Header/Header.react.jsx":162,"react":159}],165:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
