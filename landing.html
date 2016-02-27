@@ -1,0 +1,44 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/styling.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,700,400,100' rel='stylesheet' type='text/css'>
+
+  <script src="typed.js-master/bower_components/jquery/dist/jquery.js"></script>
+  <script src="typed.js-master/js/typed.js"></script>
+  <script>
+      $(function(){
+          $(".element").typed({
+              strings: ["Hi there.", "U down?"],
+              typeSpeed: 35,
+              // speed for erasing text
+              backSpeed: 17,
+              // loop
+              loop: true,
+              // false = infinite
+              loopCount: 20,
+              // show cursor
+              showCursor: true,
+              // character for cursor
+              cursorChar: "|"
+          });
+      });
+  </script>
+</head>
+
+<body>
+  <nav id="navbar" style="border: 1px solid #FFF">
+    <ul>
+      <li><a href="#" class="myButton">Login</a></li>
+    </ul>
+  </nav>
+  <div id="content" style="border: 1px solid #FFF">
+    <br><br>
+    <p><img src="public/assets/img/Logo.png" alt="uDownLogo" id="landingLogo"></p>
+    <br>
+    <span class="element"></span>
+    <br>
+    <h2>The newest Slack plugin that makes creating plans with others as easy as one-click.</h2>
+  </div>
+</body>
+
+</html>
