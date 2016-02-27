@@ -1,7 +1,9 @@
 {
   "scripts": {
     "start": "node ./babel-compiler.js",
-    "watch": "watchify -t [ babelify --presets [ es2015 react ] ] main.js -o ./public/assets/js/bundle.js -v"
+    "watch": "./node_modules/watchify/bin/cmd.js -t [ babelify --presets [ es2015 react ] ] main.js -o ./public/assets/js/bundle.js -v",
+    "build-css": "node-sass --include-path scss scss/app.scss public/css/app.css",
+    "watch-css": "nodemon -e scss -x 'npm run build-css'"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.5.0",
@@ -15,8 +17,12 @@
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
+    "bulma": "0.0.15",
     "gulp": "^3.9.1",
     "install": "^0.5.1",
-    "npm": "^3.7.5"
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.9.1",
+    "npm": "^3.7.5",
+    "watchify": "^3.7.0"
   }
 }
