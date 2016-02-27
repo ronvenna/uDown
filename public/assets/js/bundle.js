@@ -19319,6 +19319,75 @@ var Main = function (_React$Component) {
 module.exports = Main;
 
 },{"./Events/EventList.react.jsx":161,"./Header/Header.react.jsx":162,"react":159}],165:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _UserActionsReact = require('./UserActions.react.jsx');
+
+var _UserActionsReact2 = _interopRequireDefault(_UserActionsReact);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var User = function (_React$Component) {
+  _inherits(User, _React$Component);
+
+  function User() {
+    _classCallCheck(this, User);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(User).apply(this, arguments));
+  }
+
+  _createClass(User, [{
+    key: 'render',
+    value: function render() {
+      var teamName = "Strongpoop";
+      var userName = "Jane Gonzales";
+      var userImage = "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg";
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'navbar-right user' },
+        _react2.default.createElement(
+          'div',
+          { className: 'navbar-item' },
+          _react2.default.createElement(
+            'div',
+            { className: 'user_name is-text-right' },
+            userName
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'user_team is-text-right' },
+            teamName
+          )
+        ),
+        _react2.default.createElement('div', { className: 'user_image navbar-item', style: { backgroundImage: "url(" + userImage + ")" } }),
+        _react2.default.createElement(_UserActionsReact2.default, null)
+      );
+    }
+  }]);
+
+  return User;
+}(_react2.default.Component);
+
+exports.default = User;
+
+},{"./UserActions.react.jsx":166,"react":159}],166:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -19339,47 +19408,38 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var User = function (_React$Component) {
-  _inherits(User, _React$Component);
+var UserActions = function (_React$Component) {
+  _inherits(UserActions, _React$Component);
 
-  function User() {
-    _classCallCheck(this, User);
+  function UserActions() {
+    _classCallCheck(this, UserActions);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(User).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(UserActions).apply(this, arguments));
   }
 
-  _createClass(User, [{
+  _createClass(UserActions, [{
     key: "render",
     value: function render() {
-      var teamName = "Strongpoop";
-      var userName = "Jane Gonzales";
-      var userImage = "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg";
-
       return _react2.default.createElement(
         "div",
-        { className: "navbar-right user" },
+        null,
+        _react2.default.createElement(
+          "span",
+          { className: "icon" },
+          _react2.default.createElement("i", { className: "fa fa-caret-down" })
+        ),
         _react2.default.createElement(
           "div",
-          { className: "navbar-item" },
-          _react2.default.createElement(
-            "div",
-            { className: "user_name is-text-right" },
-            userName
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "user_team is-text-right" },
-            teamName
-          )
-        ),
-        _react2.default.createElement("div", { className: "user_image navbar-item", style: { backgroundImage: "url(" + userImage + ")" } })
+          { className: "user_actions is-text-centered inactive" },
+          "Log Out"
+        )
       );
     }
   }]);
 
-  return User;
+  return UserActions;
 }(_react2.default.Component);
 
-exports.default = User;
+exports.default = UserActions;
 
 },{"react":159}]},{},[1]);

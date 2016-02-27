@@ -2976,14 +2976,21 @@ a.menu-block:hover {
 
 @font-face {
   font-family: 'Cubano';
-  src: url("/public/fonts/Cubano-Regular.otf") format("opentype"); }
+  src: url("/fonts/cubano-regular-webfont.eot");
+  src: url("/fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/cubano-regular-webfont.woff") format("woff"), url("/fonts/cubano-regular-webfont.ttf") format("truetype"), url("/fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url("/public/fonts/Montserrat-Regular.otf") format("opentype"); }
+  src: url("/fonts/montserrat-regular-webfont.eot");
+  src: url("/fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-regular-webfont.woff2") format("woff2"), url("/fonts/montserrat-regular-webfont.woff") format("woff"), url("/fonts/montserrat-regular-webfont.ttf") format("truetype"), url("/fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 body {
   background-color: #02132F;
+  color: #FDFCFE;
   font-family: "Montserrat";
   height: 100vh; }
 
@@ -2993,12 +3000,18 @@ body {
     font-size: 50px;
     color: #FDFCFE; }
   .logo svg {
-    height: 38px; }
+    height: 35px; }
 
 .my-header {
   background-color: #678FDB;
   height: 75px;
   padding: 0px 30px; }
+
+.user:hover .icon {
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  -moz-transition: color 0.3s, -moz-transform 0.3s;
+  transition: color 0.3s, transform 0.3s;
+  color: #FDFCFE; }
 
 .user .user_name {
   color: #FDFCFE; }
@@ -3011,6 +3024,46 @@ body {
   width: 60px;
   border-radius: 50%;
   background-size: 60px; }
+
+.user .icon {
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  -moz-transition: color 0.3s, -moz-transform 0.3s;
+  transition: color 0.3s, transform 0.3s;
+  color: #678FDB; }
+
+.user .inactive {
+  display: none; }
+
+.user .active {
+  display: block; }
+
+.user .user_actions {
+  position: absolute;
+  height: 40px;
+  min-width: 150px;
+  right: 15px;
+  top: 80px;
+  vertical-align: middle;
+  padding-top: 10px;
+  background-color: #EB6C65;
+  border-radius: 5px; }
+  .user .user_actions:before, .user .user_actions:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .user .user_actions:after {
+    border-bottom-color: #EB6C65;
+    border-width: 10px;
+    left: 70%;
+    margin-left: 8px; }
+  .user .user_actions:before {
+    border-width: 20px;
+    left: 70%;
+    margin-left: -20px; }
 
 .event {
   background: #EB6C65;

@@ -1,4 +1,5 @@
 import React from 'react';
+import UserActions from './UserActions.react.jsx';
 
 class User extends React.Component {
 
@@ -19,6 +20,8 @@ class User extends React.Component {
         </div>
         <div className="user_image navbar-item" style={{backgroundImage: "url("+userImage + ")"}}>
         </div>
+        <UserActions />
+
       </div>
     )
   }
