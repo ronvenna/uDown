@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "node ./babel-compiler.js"
+    "start": "node ./babel-compiler.js",
+    "bundle": "browserify -t [ babelify --presets [ es2015 react ] ] main.js -o ./public/assets/js/bundle.js && node ./babel-compiler.js"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.5.0",
