@@ -18961,7 +18961,7 @@ var Test = React.createClass({
 		return React.createElement(
 			'div',
 			null,
-			' U down breh? '
+			' U down breh test? '
 		);
 	}
 

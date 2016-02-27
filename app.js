@@ -8,8 +8,11 @@ app.get('/*', function (req, res) {
   res.redirect('/index.html');
 });
 
-var server = app.listen(3000, function () {
-  var port = server.address().port;
+//Get the port
+let port = process.env.PORT || 3000;
 
-  console.log('Starter App Listening at port', port);
+//Listen to the port and start our app!
+app.listen(port, function() {
+	let StartMessage = 'U Down has started! ';
+	console.log(StartMessage);
 });

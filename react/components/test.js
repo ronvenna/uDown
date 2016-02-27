@@ -6,7 +6,7 @@ let Test = React.createClass({
 
 	render: function(){
 		return(
-			<div> U down breh? </div>
+			<div> U down breh</div>
 		);
 	}
 
