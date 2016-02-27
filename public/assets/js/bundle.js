@@ -18961,7 +18961,7 @@ var Test = React.createClass({
 		return React.createElement(
 			'div',
 			null,
-			' Test View '
+			' U down breh? '
 		);
 	}
 
