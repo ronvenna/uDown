@@ -19346,13 +19346,33 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var User = function (_React$Component) {
   _inherits(User, _React$Component);
 
-  function User() {
+  function User(props) {
     _classCallCheck(this, User);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(User).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(User).call(this, props));
+
+    _this.state = {
+      hover: false,
+      active: false
+    };
+    return _this;
   }
 
   _createClass(User, [{
+    key: 'toggleActive',
+    value: function toggleActive() {
+      this.setState({
+        active: !this.state.active
+      });
+    }
+  }, {
+    key: 'unActive',
+    value: function unActive() {
+      this.setState({
+        active: false
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var teamName = "Strongpoop";
@@ -19361,7 +19381,7 @@ var User = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'navbar-right user' },
+        { tabIndex: 0, className: 'navbar-right user', onClick: this.toggleActive.bind(this), onBlur: this.unActive.bind(this) },
         _react2.default.createElement(
           'div',
           { className: 'navbar-item' },
@@ -19377,7 +19397,7 @@ var User = function (_React$Component) {
           )
         ),
         _react2.default.createElement('div', { className: 'user_image navbar-item', style: { backgroundImage: "url(" + userImage + ")" } }),
-        _react2.default.createElement(_UserActionsReact2.default, null)
+        _react2.default.createElement(_UserActionsReact2.default, { hover: this.state.hover, active: this.state.active })
       );
     }
   }]);
@@ -19420,17 +19440,14 @@ var UserActions = function (_React$Component) {
   _createClass(UserActions, [{
     key: "render",
     value: function render() {
+      var active = this.props.active ? "active" : "inactive";
+
       return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(
-          "span",
-          { className: "icon" },
-          _react2.default.createElement("i", { className: "fa fa-caret-down" })
-        ),
-        _react2.default.createElement(
           "div",
-          { className: "user_actions is-text-centered inactive" },
+          { className: "user_actions is-text-centered " + active },
           "Log Out"
         )
       );

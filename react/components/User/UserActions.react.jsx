@@ -2,12 +2,11 @@ import React from 'react';
 
 class UserActions extends React.Component {
   render() {
+    var active = this.props.active ? "active" : "inactive";
+
     return (
       <div>
-        <span className="icon">
-          <i className="fa fa-caret-down"></i>
-        </span>
-        <div className="user_actions is-text-centered inactive">
+        <div className={"user_actions is-text-centered " + active}>
           Log Out
         </div>
 
