@@ -5,7 +5,11 @@
 }
 
 .user {
-  .user_info {
+  &:hover {
+    .icon {
+      @include richtransition(color);
+      color: $white;
+    }
   }
 
   .user_name {
@@ -21,5 +25,53 @@
     width: 60px;
     border-radius: 50%;
     background-size: 60px;
+  }
+
+  .icon {
+    @include richtransition(color);
+    color: $blue;
+  }
+
+  .inactive {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .user_actions {
+    position: absolute;
+    height: 40px;
+    min-width: 150px;
+    right: 15px;
+    top: 80px;
+    vertical-align: middle;
+    padding-top: 10px;
+    background-color: $salmon;
+    border-radius: 5px;
+
+    &:before, &:after {
+      bottom: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &:after {
+      border-bottom-color: $salmon;
+      border-width: 10px;
+      left: 70%;
+      margin-left: 8px;
+    }
+
+    &:before {
+      border-width: 20px;
+      left: 70%;
+      margin-left: -20px;
+    }
   }
 }
