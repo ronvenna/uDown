@@ -1,0 +1,25 @@
+.my-header {
+  background-color: $blue;
+  height: 75px;
+  padding: 0px 30px;
+}
+
+.user {
+  .user_info {
+  }
+
+  .user_name {
+    color: $white;
+  }
+
+  .user_team {
+    color: $salmon;
+  }
+
+  .user_image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-size: 60px;
+  }
+}

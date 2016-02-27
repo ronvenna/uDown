@@ -2976,8 +2976,38 @@ a.menu-block:hover {
 
 @font-face {
   font-family: 'Cubano';
-  src: url("./public/fonts/Wisdom.otf"); }
+  src: url("/public/fonts/Cubano-Regular.otf") format("opentype"); }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url("./public/fonts/Wisdom.otf"); }
+  src: url("/public/fonts/Montserrat-Regular.otf") format("opentype"); }
+
+body {
+  background-color: #02132F;
+  font-family: "Montserrat";
+  height: 100vh; }
+
+.logo {
+  font-family: "Cubano"; }
+  .logo span {
+    font-size: 50px;
+    color: #FDFCFE; }
+  .logo svg {
+    height: 38px; }
+
+.my-header {
+  background-color: #678FDB;
+  height: 75px;
+  padding: 0px 30px; }
+
+.user .user_name {
+  color: #FDFCFE; }
+
+.user .user_team {
+  color: #EB6C65; }
+
+.user .user_image {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-size: 60px; }
