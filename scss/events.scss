@@ -1,16 +1,28 @@
+.single-centered {
+  justify-content: center;
+}
+
+.lite {
+  .event .event_header {
+    color: $coral;
+  }
+}
+
 .event {
-  background: $salmon;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+  background: $white;
   border-radius: 5px;
-  color: $white;
+  color: $dark-blue;
+  box-shadow: 0px 0px 100px -23px rgba(0,0,0,0.50);
   margin-bottom: 30px;
 
   .event_header {
-    background: $coral;
+    background: $white;
+    color: $light-purple;
+    box-shadow: 0px 2px 40px 0px rgba(0,0,0,0.20);
     border-radius: 5px 5px 0px 0px;
     min-height: 80px;
-    padding-left: 25px;
-    padding-top: 40px;
+    padding: 25px 40px;
+    text-align: center;
     font-size: 24px;
   }
 
@@ -22,9 +34,12 @@
   }
 
   .attendee {
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 20px;
     align-items: center;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 100px -23px rgba(0,0,0,0.50);
   }
 
   .eventInput {
@@ -75,10 +90,11 @@
     align-items: center;
     text-align: center;
     margin: 0px auto;
+    margin-top: 20px;
     width: 60px;
     height: 60px;
     background-color: $salmon;
-    color: $blue;
+    color: $white;
     border-radius: 50%;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 

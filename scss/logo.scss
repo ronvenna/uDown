@@ -8,3 +8,45 @@
     height: 35px;
   }
 }
+
+.branding {
+  text-align: center;
+  .logo {
+    span {
+      font-size: 150px;
+      color: $light-purple;
+    }
+
+    svg {
+      height: 107px;
+    }
+
+    path {
+      stroke: $light-purple;
+    }
+
+    polygon {
+      fill: $light-purple;
+    }
+  }
+}
+
+.lite {
+  .branding {
+    .logo {
+      span {
+        color: $white;
+
+      }
+
+      path {
+        stroke: $white;
+      }
+
+      polygon {
+        fill: $white;
+      }
+    }
+
+  }
+}

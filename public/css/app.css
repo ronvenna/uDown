@@ -3028,6 +3028,12 @@ body {
   font-family: "Montserrat";
   min-height: 100vh; }
 
+body.lite {
+  background-color: #FEA29D; }
+
+.columns {
+  margin-top: 0; }
+
 .logo {
   font-family: "Cubano"; }
   .logo span {
@@ -3035,6 +3041,27 @@ body {
     color: #FDFCFE; }
   .logo svg {
     height: 35px; }
+
+.branding {
+  text-align: center; }
+  .branding .logo span {
+    font-size: 150px;
+    color: #C287FE; }
+  .branding .logo svg {
+    height: 107px; }
+  .branding .logo path {
+    stroke: #C287FE; }
+  .branding .logo polygon {
+    fill: #C287FE; }
+
+.lite .branding .logo span {
+  color: #FDFCFE; }
+
+.lite .branding .logo path {
+  stroke: #FDFCFE; }
+
+.lite .branding .logo polygon {
+  fill: #FDFCFE; }
 
 .my-header {
   background-color: #678FDB;
@@ -3088,18 +3115,26 @@ body {
       left: 70%;
       margin-left: -20px; }
 
+.single-centered {
+  justify-content: center; }
+
+.lite .event .event_header {
+  color: #FEA29D; }
+
 .event {
-  background: #EB6C65;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  background: #FDFCFE;
   border-radius: 5px;
-  color: #FDFCFE;
+  color: #02132F;
+  box-shadow: 0px 0px 100px -23px rgba(0, 0, 0, 0.5);
   margin-bottom: 30px; }
   .event .event_header {
-    background: #FEA29D;
+    background: #FDFCFE;
+    color: #C287FE;
+    box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.2);
     border-radius: 5px 5px 0px 0px;
     min-height: 80px;
-    padding-left: 25px;
-    padding-top: 40px;
+    padding: 25px 40px;
+    text-align: center;
     font-size: 24px; }
   .event .event_body {
     padding: 25px 40px;
@@ -3107,9 +3142,12 @@ body {
     max-height: 500px;
     overflow: scroll; }
   .event .attendee {
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 20px;
-    align-items: center; }
+    align-items: center;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 100px -23px rgba(0, 0, 0, 0.5); }
   .event .eventInput {
     font-family: "Montserrat";
     height: 35px;
@@ -3157,10 +3195,11 @@ body {
   align-items: center;
   text-align: center;
   margin: 0px auto;
+  margin-top: 20px;
   width: 60px;
   height: 60px;
   background-color: #EB6C65;
-  color: #678FDB;
+  color: #FDFCFE;
   border-radius: 50%;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); }
   .add_event .add_event_button:hover {
