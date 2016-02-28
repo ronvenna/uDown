@@ -19291,6 +19291,13 @@ var AttendeeList = function (_React$Component) {
   _createClass(AttendeeList, [{
     key: 'render',
     value: function render() {
+      if (this.props.attendees.length == 0) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'no_attendee' },
+          'No one is down :('
+        );
+      }
       var attendees = this.props.attendees.map(function (attendee, i) {
         return _react2.default.createElement(_AttendeeReact2.default, { key: "attendee" + i, attendee: attendee });
       });

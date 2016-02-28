@@ -49,13 +49,17 @@
     border: 1px solid $coral;
     color: $white;
     border-radius: 999em;
-    
+
     &:hover {
       @include richtransition(border-color);
       @include richtransition(color);
       border-color: #ffffff;
       color: #ffffff
     }
+  }
+
+  .no_attendee {
+    margin-top: 30px;
   }
 
 }
