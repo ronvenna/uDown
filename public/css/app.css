@@ -3025,7 +3025,8 @@ a.menu-block:hover {
 body {
   background-color: #02132F;
   color: #FDFCFE;
-  font-family: "Montserrat"; }
+  font-family: "Montserrat";
+  min-height: 100vh; }
 
 .logo {
   font-family: "Cubano"; }

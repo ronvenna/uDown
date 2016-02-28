@@ -19239,7 +19239,7 @@ var Attendee = function (_React$Component) {
       return _react2.default.createElement(
         "article",
         { className: "attendee media" },
-        _react2.default.createElement("div", { className: "user_image media-left", style: { backgroundImage: "url(" + this.props.attendee.image + ")" } }),
+        _react2.default.createElement("div", { className: "user_image media-left", style: { backgroundImage: "url(" + this.props.attendee.profile.image_72 + ")" } }),
         _react2.default.createElement(
           "div",
           { className: "media-right" },
@@ -19354,7 +19354,7 @@ var EventCard = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'event_header' },
-          eventName + " - " + eventTime + " | " + eventLocation
+          eventLocation + " | " + eventTime
         ),
         _react2.default.createElement(
           'div',
@@ -19364,7 +19364,7 @@ var EventCard = function (_React$Component) {
             null,
             'Who\'s down?'
           ),
-          _react2.default.createElement(_AttendeeListReact2.default, { attendees: this.props.event.attendees })
+          _react2.default.createElement(_AttendeeListReact2.default, { attendees: this.props.event.attending })
         )
       );
     }
@@ -19579,98 +19579,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var data = {
-  events: [{
-    name: "Lunch",
-    location: "Chipotle",
-    time: "1pm",
-    attendees: [{
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }],
-    invited: [{
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }]
-  }, {
-    name: "Lunch",
-    location: "Chipotle",
-    time: "1pm",
-    attendees: [{
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }],
-    invited: [{
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }, {
-      name: "Jane Gonzales",
-      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
-      team: "Strongpoop"
-    }]
-  }]
-};
-
 var Main = function (_React$Component) {
   _inherits(Main, _React$Component);
 
@@ -19681,7 +19589,9 @@ var Main = function (_React$Component) {
 
     _this.state = {
       newEventActive: false,
-      modal: _react2.default.createElement(_CreateEventReact2.default, { close: _this.closeEvent.bind(_this) })
+      modal: _react2.default.createElement(_CreateEventReact2.default, { close: _this.closeEvent.bind(_this) }),
+      data: [],
+      error: false
     };
     _this.getData();
     return _this;
@@ -19690,14 +19600,21 @@ var Main = function (_React$Component) {
   _createClass(Main, [{
     key: 'getData',
     value: function getData() {
+      var _this2 = this;
+
+      var id = window.location.search.split('?id=')[1];
       $.ajax({
-        url: "https://udown.localtunnel.me/v1/events/lggv2gyvepPu",
+        url: "https://u-down-web-socket-controller.herokuapp.com/v1/events/" + id,
         type: "GET",
         success: function success(data) {
-          return console.log(data);
+          return _this2.setState({
+            data: [data]
+          });
         },
         error: function error(err) {
-          return console.log("boooo");
+          return _this2.setState({
+            error: true
+          });
         }
       });
     }
@@ -19721,6 +19638,7 @@ var Main = function (_React$Component) {
     key: 'render',
     value: function render() {
       var isActive = this.state.newEventActive ? "is-active" : "";
+      console.log(this.state.data);
       return _react2.default.createElement(
         'div',
         { className: '' },
@@ -19743,7 +19661,7 @@ var Main = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'columns' },
-          _react2.default.createElement(_EventListReact2.default, { events: data.events }),
+          _react2.default.createElement(_EventListReact2.default, { events: this.state.data, error: this.state.error }),
           _react2.default.createElement(
             'div',
             { className: 'column is-1 is-offset-3 add_event' },
