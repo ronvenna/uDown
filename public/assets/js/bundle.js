@@ -19239,7 +19239,7 @@ var Attendee = function (_React$Component) {
       return _react2.default.createElement(
         "article",
         { className: "attendee media" },
-        _react2.default.createElement("div", { className: "user_image media-left", style: { backgroundImage: "url(" + this.props.attendee.profile.image_72 + ")" } }),
+        _react2.default.createElement("div", { className: "user_image media-left", style: { backgroundImage: "url(" + this.props.attendee.profile.image_192 + ")" } }),
         _react2.default.createElement(
           "div",
           { className: "media-right" },
@@ -19656,7 +19656,6 @@ var Main = function (_React$Component) {
     key: 'render',
     value: function render() {
       var isActive = this.state.newEventActive ? "is-active" : "";
-      console.log(this.state.data);
       return _react2.default.createElement(
         'div',
         { className: '' },

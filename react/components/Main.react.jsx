@@ -52,7 +52,6 @@ class Main extends React.Component {
 
   render() {
     let isActive = this.state.newEventActive ? "is-active" : "";
-    console.log(this.state.data);
     return(
       <div className="">
         <Header />
