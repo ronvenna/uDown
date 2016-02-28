@@ -8,7 +8,7 @@ var Main = React.createFactory(require('./react/components/Main.react.jsx'));
 
 ReactDOM.render(React.createElement(Main, null), document.getElementById('example'));
 
-},{"./react/components/Main.react.jsx":164,"react":159,"react-dom":30}],2:[function(require,module,exports){
+},{"./react/components/Main.react.jsx":166,"react":159,"react-dom":30}],2:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19061,6 +19061,116 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var Attendee = function (_React$Component) {
+  _inherits(Attendee, _React$Component);
+
+  function Attendee() {
+    _classCallCheck(this, Attendee);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(Attendee).apply(this, arguments));
+  }
+
+  _createClass(Attendee, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "article",
+        { className: "attendee media" },
+        _react2.default.createElement("div", { className: "user_image media-left", style: { backgroundImage: "url(" + this.props.attendee.image + ")" } }),
+        _react2.default.createElement(
+          "div",
+          { className: "media-right" },
+          this.props.attendee.name
+        )
+      );
+    }
+  }]);
+
+  return Attendee;
+}(_react2.default.Component);
+
+exports.default = Attendee;
+
+},{"react":159}],161:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _AttendeeReact = require('./Attendee.react.jsx');
+
+var _AttendeeReact2 = _interopRequireDefault(_AttendeeReact);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AttendeeList = function (_React$Component) {
+  _inherits(AttendeeList, _React$Component);
+
+  function AttendeeList() {
+    _classCallCheck(this, AttendeeList);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(AttendeeList).apply(this, arguments));
+  }
+
+  _createClass(AttendeeList, [{
+    key: 'render',
+    value: function render() {
+      console.log(JSON.parse(JSON.stringify(this.props)));
+      var attendees = this.props.attendees.map(function (attendee, i) {
+        return _react2.default.createElement(_AttendeeReact2.default, { key: "attendee" + i, attendee: attendee });
+      });
+      console.log(attendees);
+      return _react2.default.createElement(
+        'div',
+        null,
+        attendees
+      );
+    }
+  }]);
+
+  return AttendeeList;
+}(_react2.default.Component);
+
+exports.default = AttendeeList;
+
+},{"./Attendee.react.jsx":160,"react":159}],162:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _AttendeeListReact = require('./AttendeeList.react.jsx');
+
+var _AttendeeListReact2 = _interopRequireDefault(_AttendeeListReact);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var EventCard = function (_React$Component) {
   _inherits(EventCard, _React$Component);
 
@@ -19071,28 +19181,29 @@ var EventCard = function (_React$Component) {
   }
 
   _createClass(EventCard, [{
-    key: "render",
+    key: 'render',
     value: function render() {
-      var eventName = "Lunch";
-      var eventTime = "8pm";
-      var eventLocation = "Chipotle";
+      var eventName = this.props.event.name;
+      var eventTime = this.props.event.time;
+      var eventLocation = this.props.event.location;
 
       return _react2.default.createElement(
-        "div",
-        { className: "event" },
+        'div',
+        { className: 'event' },
         _react2.default.createElement(
-          "div",
-          { className: "event_header" },
+          'div',
+          { className: 'event_header' },
           eventName + " - " + eventTime + " | " + eventLocation
         ),
         _react2.default.createElement(
-          "div",
-          { className: "event_body" },
+          'div',
+          { className: 'event_body' },
           _react2.default.createElement(
-            "p",
+            'p',
             null,
-            "Who's down?"
-          )
+            'Who\'s down?'
+          ),
+          _react2.default.createElement(_AttendeeListReact2.default, { attendees: this.props.event.attendees })
         )
       );
     }
@@ -19103,8 +19214,12 @@ var EventCard = function (_React$Component) {
 
 exports.default = EventCard;
 
-},{"react":159}],161:[function(require,module,exports){
+},{"./AttendeeList.react.jsx":161,"react":159}],163:[function(require,module,exports){
 'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -19124,32 +19239,37 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Main = function (_React$Component) {
-  _inherits(Main, _React$Component);
+var EventList = function (_React$Component) {
+  _inherits(EventList, _React$Component);
 
-  function Main() {
-    _classCallCheck(this, Main);
+  function EventList() {
+    _classCallCheck(this, EventList);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(Main).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(EventList).apply(this, arguments));
   }
 
-  _createClass(Main, [{
+  _createClass(EventList, [{
     key: 'render',
     value: function render() {
+      console.log(this.props);
+      var events = this.props.events.map(function (event, i) {
+        return _react2.default.createElement(_EventCardReact2.default, { key: "Event" + i, event: event });
+      });
+      console.log(events);
       return _react2.default.createElement(
         'div',
         { className: 'column is-4 is-offset-4' },
-        _react2.default.createElement(_EventCardReact2.default, null)
+        events
       );
     }
   }]);
 
-  return Main;
+  return EventList;
 }(_react2.default.Component);
 
-module.exports = Main;
+exports.default = EventList;
 
-},{"./EventCard.react.jsx":160,"react":159}],162:[function(require,module,exports){
+},{"./EventCard.react.jsx":162,"react":159}],164:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19212,7 +19332,7 @@ var Header = function (_React$Component) {
 
 exports.default = Header;
 
-},{"../Logo/Logo.react.jsx":163,"../User/User.react.jsx":165,"react":159}],163:[function(require,module,exports){
+},{"../Logo/Logo.react.jsx":165,"../User/User.react.jsx":167,"react":159}],165:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19263,7 +19383,7 @@ var Logo = function (_React$Component) {
 
 exports.default = Logo;
 
-},{"react":159}],164:[function(require,module,exports){
+},{"react":159}],166:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -19288,6 +19408,98 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var data = {
+  events: [{
+    name: "Lunch",
+    location: "Chipotle",
+    time: "1pm",
+    attendees: [{
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }],
+    invited: [{
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }]
+  }, {
+    name: "Lunch",
+    location: "Chipotle",
+    time: "1pm",
+    attendees: [{
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }],
+    invited: [{
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }]
+  }]
+};
+
 var Main = function (_React$Component) {
   _inherits(Main, _React$Component);
 
@@ -19300,6 +19512,7 @@ var Main = function (_React$Component) {
   _createClass(Main, [{
     key: 'render',
     value: function render() {
+
       return _react2.default.createElement(
         'div',
         { className: '' },
@@ -19307,7 +19520,7 @@ var Main = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'columns' },
-          _react2.default.createElement(_EventListReact2.default, null)
+          _react2.default.createElement(_EventListReact2.default, { events: data.events })
         )
       );
     }
@@ -19318,7 +19531,7 @@ var Main = function (_React$Component) {
 
 module.exports = Main;
 
-},{"./Events/EventList.react.jsx":161,"./Header/Header.react.jsx":162,"react":159}],165:[function(require,module,exports){
+},{"./Events/EventList.react.jsx":163,"./Header/Header.react.jsx":164,"react":159}],167:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19397,7 +19610,7 @@ var User = function (_React$Component) {
           )
         ),
         _react2.default.createElement('div', { className: 'user_image navbar-item', style: { backgroundImage: "url(" + userImage + ")" } }),
-        _react2.default.createElement(_UserActionsReact2.default, { hover: this.state.hover, active: this.state.active })
+        _react2.default.createElement(_UserActionsReact2.default, { active: this.state.active })
       );
     }
   }]);
@@ -19407,7 +19620,7 @@ var User = function (_React$Component) {
 
 exports.default = User;
 
-},{"./UserActions.react.jsx":166,"react":159}],166:[function(require,module,exports){
+},{"./UserActions.react.jsx":168,"react":159}],168:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

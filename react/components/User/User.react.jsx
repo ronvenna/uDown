@@ -40,7 +40,7 @@ class User extends React.Component {
         </div>
         <div className="user_image navbar-item" style={{backgroundImage: "url("+userImage + ")"}}>
         </div>
-        <UserActions hover={this.state.hover} active={this.state.active}/>
+        <UserActions active={this.state.active}/>
 
       </div>
     )

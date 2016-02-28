@@ -4,6 +4,13 @@
   padding: 0px 30px;
 }
 
+.user_image {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-size: 60px;
+}
+
 .user {
   cursor: pointer;
   .user_name {
@@ -14,12 +21,6 @@
     color: $salmon;
   }
 
-  .user_image {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-size: 60px;
-  }
 
   .icon {
     color: $white;

@@ -1,12 +1,13 @@
 import React from 'react';
+import AttendeeList from './AttendeeList.react.jsx';
 
 class EventCard extends React.Component {
 
 
   render() {
-    let eventName = "Lunch";
-    let eventTime = "8pm";
-    let eventLocation = "Chipotle";
+    let eventName = this.props.event.name;
+    let eventTime = this.props.event.time;
+    let eventLocation = this.props.event.location;
 
     return(
       <div className="event">
@@ -15,6 +16,7 @@ class EventCard extends React.Component {
         </div>
         <div className="event_body">
           <p>Who's down?</p>
+          <AttendeeList attendees={this.props.event.attendees} />
         </div>
       </div>
     )
