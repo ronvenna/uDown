@@ -3077,3 +3077,20 @@ body {
     font-size: 14px;
     margin-top: 20px;
     align-items: center; }
+  .event .inputEvent {
+    width: 70%;
+    height: 35px;
+    border-radius: 9px;
+    border-width: 0px; }
+  .event .inputUsers {
+    width: 70%;
+    height: 100px;
+    border-radius: 9px;
+    border-width: 0px; }
+  .event .eventSave {
+    margin-right: 10px; }
+  .event .eventLabel {
+    display: inline-block;
+    padding: 20px;
+    width: 90px;
+    text-align: right; }

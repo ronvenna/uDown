@@ -28,4 +28,29 @@
     margin-top: 20px;
     align-items: center;
   }
+
+  .inputEvent {
+    width: 70%;
+    height: 35px;;
+    border-radius: 9px;
+    border-width: 0px;
+  }
+
+  .inputUsers {
+    width: 70%;
+    height: 100px;
+    border-radius: 9px;
+    border-width: 0px;
+  }
+
+  .eventSave {
+    margin-right: 10px;
+  }
+
+  .eventLabel {
+    display: inline-block;
+    padding: 20px;
+    width: 90px;
+    text-align: right;
+  }
 }

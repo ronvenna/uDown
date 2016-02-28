@@ -19073,33 +19073,46 @@ var CreateEvent = function (_React$Component) {
   _createClass(CreateEvent, [{
     key: "render",
     value: function render() {
-      var eventName = "Lunch";
-      var eventTime = "8pm";
-      var eventLocation = "Chipotle";
+      var newEventHeader = "Create new event";
 
       return _react2.default.createElement(
         "div",
-        { className: "event" },
+        { className: "column is-4 is-offset-4" },
         _react2.default.createElement(
           "div",
-          { className: "event_header" },
-          "\"Create Event fudger\""
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "event_body" },
+          { className: "event" },
           _react2.default.createElement(
-            "p",
-            null,
-            "Event: "
+            "div",
+            { className: "event_header" },
+            newEventHeader
           ),
-          _react2.default.createElement("input", { "class": "input", type: "text" }),
           _react2.default.createElement(
-            "p",
-            null,
-            "Time: "
-          ),
-          _react2.default.createElement("input", { "class": "input", type: "text" })
+            "div",
+            { className: "event_body" },
+            _react2.default.createElement(
+              "p",
+              { className: "eventLabel" },
+              "Event: "
+            ),
+            _react2.default.createElement("input", { className: "inputEvent", type: "text" }),
+            _react2.default.createElement(
+              "p",
+              { className: "eventLabel" },
+              "Time: "
+            ),
+            _react2.default.createElement("input", { className: "inputEvent", type: "text" }),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Select Slack team members:"
+            ),
+            _react2.default.createElement("input", { className: "inputUsers", type: "text" }),
+            _react2.default.createElement(
+              "button",
+              { className: "button eventSave pull-right" },
+              "Save"
+            )
+          )
         )
       );
     }

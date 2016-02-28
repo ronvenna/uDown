@@ -130,7 +130,7 @@ class Main extends React.Component {
         <div className="columns">
           <EventList events={data.events}/>
         </div>
-        <CreateEvent/>
+        <CreateEvent />
       </div>
     );
   }
