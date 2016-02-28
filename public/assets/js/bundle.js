@@ -19579,6 +19579,98 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var data = {
+  events: [{
+    name: "Lunch",
+    location: "Chipotle",
+    time: "1pm",
+    attendees: [{
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }],
+    invited: [{
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }]
+  }, {
+    name: "Lunch",
+    location: "Chipotle",
+    time: "1pm",
+    attendees: [{
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }],
+    invited: [{
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }, {
+      name: "Jane Gonzales",
+      image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+      team: "Strongpoop"
+    }]
+  }]
+};
+
 var Main = function (_React$Component) {
   _inherits(Main, _React$Component);
 
@@ -19591,10 +19683,25 @@ var Main = function (_React$Component) {
       newEventActive: false,
       modal: _react2.default.createElement(_CreateEventReact2.default, { close: _this.closeEvent.bind(_this) })
     };
+    getData();
     return _this;
   }
 
   _createClass(Main, [{
+    key: 'getData',
+    value: function getData() {
+      $.ajax({
+        url: "https://udown.localtunnel.me/v1/events/lggv2gyvepPu",
+        type: "GET",
+        success: function success(data) {
+          return console.log(data);
+        },
+        error: function error(err) {
+          return console.log("boooo");
+        }
+      });
+    }
+  }, {
     key: 'addNewEvent',
     value: function addNewEvent() {
       this.setState({

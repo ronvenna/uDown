@@ -5,6 +5,124 @@ import EventList from './Events/EventList.react.jsx';
 import CreateEvent from './CreateEvent/CreateEvent.react.jsx';
 import PlusButton from './CreateEvent/PlusButton.react.jsx';
 
+let data = {
+  events : [
+    {
+      name: "Lunch",
+      location: "Chipotle",
+      time: "1pm",
+      attendees: [
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        }
+      ],
+      invited: [
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        }
+      ]
+    },
+    {
+      name: "Lunch",
+      location: "Chipotle",
+      time: "1pm",
+      attendees: [
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        }
+      ],
+      invited: [
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        },
+        {
+          name: "Jane Gonzales",
+          image: "http://img06.deviantart.net/3c50/i/2005/096/e/3/minimalist_headshot_stock_2_by_kristyvictoria.jpg",
+          team: "Strongpoop"
+        }
+      ]
+    }
+  ]
+};
+
 class Main extends React.Component {
 
   constructor(props) {
@@ -13,6 +131,16 @@ class Main extends React.Component {
       newEventActive : false,
       modal: <CreateEvent close={this.closeEvent.bind(this)} />
     }
+    getData()
+  }
+
+  getData() {
+    $.ajax({
+      url: "https://udown.localtunnel.me/v1/events/lggv2gyvepPu",
+      type: "GET",
+      success: (data) => (console.log(data)),
+      error: (err) => (console.log("boooo"))
+    })
   }
 
   addNewEvent() {
