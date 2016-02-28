@@ -4,6 +4,7 @@ import Header from './Header/Header.react.jsx';
 import EventList from './Events/EventList.react.jsx';
 import CreateEvent from './CreateEvent/CreateEvent.react.jsx';
 import PlusButton from './CreateEvent/PlusButton.react.jsx';
+import ThemeSwitch from './ThemeSwitch/ThemeSwitch.react.jsx';
 import Logo from './Logo/Logo.react.jsx'
 
 class Main extends React.Component {
@@ -59,10 +60,13 @@ class Main extends React.Component {
           <div className="column is-4 is-offset-4">
             <Logo />
           </div>
+          <div className="column is-1 is-offset-3 add_event">
+            <ThemeSwitch />
+          </div>
         </div>
         <div className="columns single-centered">
           <EventList events={this.state.data} error={this.state.error}/>
-        </div>
+          </div>
       </div>
     );
   }

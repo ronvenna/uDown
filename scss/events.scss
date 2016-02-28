@@ -2,6 +2,12 @@
   justify-content: center;
 }
 
+.lite {
+  .event .event_header {
+    color: $coral;
+  }
+}
+
 .event {
   background: $white;
   border-radius: 5px;
@@ -84,10 +90,11 @@
     align-items: center;
     text-align: center;
     margin: 0px auto;
+    margin-top: 20px;
     width: 60px;
     height: 60px;
     background-color: $salmon;
-    color: $blue;
+    color: $white;
     border-radius: 50%;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 

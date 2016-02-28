@@ -19509,7 +19509,7 @@ var Header = function (_React$Component) {
 
 exports.default = Header;
 
-},{"../Logo/Logo.react.jsx":167,"../User/User.react.jsx":169,"react":159}],167:[function(require,module,exports){
+},{"../Logo/Logo.react.jsx":167,"../User/User.react.jsx":170,"react":159}],167:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19588,6 +19588,10 @@ var _CreateEventReact2 = _interopRequireDefault(_CreateEventReact);
 var _PlusButtonReact = require('./CreateEvent/PlusButton.react.jsx');
 
 var _PlusButtonReact2 = _interopRequireDefault(_PlusButtonReact);
+
+var _ThemeSwitchReact = require('./ThemeSwitch/ThemeSwitch.react.jsx');
+
+var _ThemeSwitchReact2 = _interopRequireDefault(_ThemeSwitchReact);
 
 var _LogoReact = require('./Logo/Logo.react.jsx');
 
@@ -19670,6 +19674,11 @@ var Main = function (_React$Component) {
             'div',
             { className: 'column is-4 is-offset-4' },
             _react2.default.createElement(_LogoReact2.default, null)
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'column is-1 is-offset-3 add_event' },
+            _react2.default.createElement(_ThemeSwitchReact2.default, null)
           )
         ),
         _react2.default.createElement(
@@ -19710,7 +19719,67 @@ var Main = function (_React$Component) {
 
 module.exports = Main;
 
-},{"./CreateEvent/CreateEvent.react.jsx":160,"./CreateEvent/PlusButton.react.jsx":161,"./Events/EventList.react.jsx":165,"./Header/Header.react.jsx":166,"./Logo/Logo.react.jsx":167,"react":159,"react-dom":30}],169:[function(require,module,exports){
+},{"./CreateEvent/CreateEvent.react.jsx":160,"./CreateEvent/PlusButton.react.jsx":161,"./Events/EventList.react.jsx":165,"./Header/Header.react.jsx":166,"./Logo/Logo.react.jsx":167,"./ThemeSwitch/ThemeSwitch.react.jsx":169,"react":159,"react-dom":30}],169:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PlusButton = function (_React$Component) {
+  _inherits(PlusButton, _React$Component);
+
+  function PlusButton() {
+    _classCallCheck(this, PlusButton);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(PlusButton).apply(this, arguments));
+  }
+
+  _createClass(PlusButton, [{
+    key: "switchTheme",
+    value: function switchTheme() {
+      console.log(document.body.classList);
+      if (document.body.classList.length == 0) {
+        document.body.classList.add("lite");
+      } else {
+        document.body.classList.remove("lite");
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "a",
+        { className: "add_event_button", onClick: this.switchTheme },
+        _react2.default.createElement(
+          "span",
+          { className: "icon" },
+          _react2.default.createElement("i", { className: "fa fa-lightbulb-o" })
+        )
+      );
+    }
+  }]);
+
+  return PlusButton;
+}(_react2.default.Component);
+
+exports.default = PlusButton;
+
+},{"react":159}],170:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19799,7 +19868,7 @@ var User = function (_React$Component) {
 
 exports.default = User;
 
-},{"./UserActions.react.jsx":170,"react":159}],170:[function(require,module,exports){
+},{"./UserActions.react.jsx":171,"react":159}],171:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

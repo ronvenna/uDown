@@ -4,3 +4,11 @@ body {
   font-family: "Montserrat";
   min-height: 100vh;
 }
+
+body.lite {
+  background-color: $coral;
+}
+
+.columns {
+  margin-top: 0;
+}

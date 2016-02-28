@@ -30,3 +30,23 @@
     }
   }
 }
+
+.lite {
+  .branding {
+    .logo {
+      span {
+        color: $white;
+
+      }
+
+      path {
+        stroke: $white;
+      }
+
+      polygon {
+        fill: $white;
+      }
+    }
+
+  }
+}
