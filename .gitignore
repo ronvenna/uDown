@@ -10,3 +10,4 @@ src/.DS_Store
 .Trashes
 node_modules
 *.log
+public/assets/js/

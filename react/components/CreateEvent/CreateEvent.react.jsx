@@ -14,8 +14,8 @@ class CreateEvent extends React.Component {
           "Create Event fudger"
         </div>
         <div className="event_body">
-          <p>Event: </p><input class="input" type="text"></input>
-          <p>Time: </p><input class="input" type="text"></input>
+          <p>Event: </p><input className="input" type="text"></input>
+          <p>Time: </p><input className="input" type="text"></input>
         </div>
       </div>
     )
