@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header/Header.react.jsx';
 import EventList from './Events/EventList.react.jsx';
 import CreateEvent from './CreateEvent/CreateEvent.react.jsx';
-
+import PlusButton from './CreateEvent/PlusButton.react.jsx';
 let data = {
   events : [
     {
@@ -122,6 +122,11 @@ let data = {
 };
 
 class Main extends React.Component {
+
+  addNewEvent() {
+      console.log("add me boi");
+  }
+
   render() {
 
     return(
@@ -129,6 +134,9 @@ class Main extends React.Component {
         <Header />
         <div className="columns">
           <EventList events={data.events}/>
+          <div className="column is-1 is-offset-3 add_event">
+            <PlusButton onClick={this.addNewEvent}/>
+          </div>
         </div>
         <CreateEvent />
       </div>
