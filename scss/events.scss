@@ -15,10 +15,8 @@
   }
 
   .event_body {
-    padding-left: 25px;
-    padding-top: 40px;
+    padding: 25px 40px;
     font-size: 18px;
-    padding-bottom: 40px;
     max-height: 500px;
     overflow: scroll;
   }
@@ -29,30 +27,37 @@
     align-items: center;
   }
 
-  .inputEvent {
-    width: 70%;
-    height: 35px;;
+  .eventInput {
+    font-family: "Montserrat";
+    height: 35px;
     border-radius: 9px;
     border-width: 0px;
   }
 
-  .inputUsers {
-    width: 70%;
-    height: 100px;
-    border-radius: 9px;
-    border-width: 0px;
+  textarea {
+    width: 100%;
+    min-height: 150px;
   }
 
   .eventSave {
-    margin-right: 10px;
+
+
+    @include richtransition(border-color);
+    @include richtransition(color);
+    width: 80px;
+    background: transparent;
+    border: 1px solid $coral;
+    color: $white;
+    border-radius: 999em;
+    
+    &:hover {
+      @include richtransition(border-color);
+      @include richtransition(color);
+      border-color: #ffffff;
+      color: #ffffff
+    }
   }
 
-  .eventLabel {
-    display: inline-block;
-    padding: 20px;
-    width: 90px;
-    text-align: right;
-  }
 }
 
 .add_event {
@@ -81,4 +86,16 @@
 
   }
 
+}
+
+.is-active div{
+  @include fadein;
+}
+
+.modal-close {
+  @include richtransition(background);
+  &:hover {
+    @include richtransition(background);
+    background: $salmon;
+  }
 }
