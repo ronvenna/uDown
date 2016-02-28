@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header/Header.react.jsx';
 import EventList from './Events/EventList.react.jsx';
+import CreateEvent from './CreateEvent/CreateEvent.react.jsx';
 
 let data = {
   events : [
@@ -129,6 +130,7 @@ class Main extends React.Component {
         <div className="columns">
           <EventList events={data.events}/>
         </div>
+        <CreateEvent/>
       </div>
     );
   }
