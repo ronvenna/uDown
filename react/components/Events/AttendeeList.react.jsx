@@ -6,7 +6,7 @@ class AttendeeList extends React.Component {
   render() {
     if (this.props.attendees.length == 0) {
       return (
-        <div className="no_attendee">
+        <div className="event_error">
           No one is down :(
         </div>
       )

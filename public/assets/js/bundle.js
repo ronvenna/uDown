@@ -19294,7 +19294,7 @@ var AttendeeList = function (_React$Component) {
       if (this.props.attendees.length == 0) {
         return _react2.default.createElement(
           'div',
-          { className: 'no_attendee' },
+          { className: 'event_error' },
           'No one is down :('
         );
       }
@@ -19419,6 +19419,17 @@ var EventList = function (_React$Component) {
   _createClass(EventList, [{
     key: 'render',
     value: function render() {
+      if (this.props.events.lenght == 0 || this.props.error) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'column is-4 is-offset-4 event event_error' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            'There was a problem finding your event :('
+          )
+        );
+      }
       var events = this.props.events.map(function (event, i) {
         return _react2.default.createElement(_EventCardReact2.default, { key: "Event" + i, event: event });
       });

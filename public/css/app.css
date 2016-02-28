@@ -3139,8 +3139,10 @@ body {
       transition: color 0.3s, transform 0.3s;
       border-color: #ffffff;
       color: #ffffff; }
-  .event .no_attendee {
-    margin-top: 30px; }
+
+.event_error {
+  margin-top: 30px;
+  font-size: 24px; }
 
 .add_event .add_event_button {
   -webkit-transition: color 0.3s, -webkit-transform 0.3s;
