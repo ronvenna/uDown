@@ -10,6 +10,11 @@ app.get('/create', function (req, res) {
   res.redirect('/create.html');
 });
 
+app.get('/id/:id', function (req, res) {
+  var id = req.params.id;
+  res.redirect('/index.html?id=' + id);
+})
+
 app.use(express.static(__dirname + '/public'));
 
 //Get the port

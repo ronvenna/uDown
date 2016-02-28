@@ -49,7 +49,7 @@
     border: 1px solid $coral;
     color: $white;
     border-radius: 999em;
-    
+
     &:hover {
       @include richtransition(border-color);
       @include richtransition(color);
@@ -58,6 +58,11 @@
     }
   }
 
+}
+
+.event_error {
+  margin-top: 30px;
+  font-size: 24px;
 }
 
 .add_event {

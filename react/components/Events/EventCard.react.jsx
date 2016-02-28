@@ -12,11 +12,11 @@ class EventCard extends React.Component {
     return(
       <div className="event">
         <div className="event_header">
-          {eventName + " - " + eventTime + " | " + eventLocation}
+          {eventLocation + " | " + eventTime}
         </div>
         <div className="event_body">
           <p>Who's down?</p>
-          <AttendeeList attendees={this.props.event.attendees} />
+          <AttendeeList attendees={this.props.event.attending} />
         </div>
       </div>
     )
