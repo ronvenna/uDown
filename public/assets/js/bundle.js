@@ -19422,7 +19422,7 @@ var EventList = function (_React$Component) {
       if (this.props.events.lenght == 0 || this.props.error) {
         return _react2.default.createElement(
           'div',
-          { className: 'column is-4 is-offset-4 event event_error' },
+          { className: 'column is-4 event event_error' },
           _react2.default.createElement(
             'h1',
             null,
@@ -19435,7 +19435,7 @@ var EventList = function (_React$Component) {
       });
       return _react2.default.createElement(
         'div',
-        { className: 'column is-4 is-offset-4' },
+        { className: 'column is-3' },
         events
       );
     }
@@ -19589,6 +19589,10 @@ var _PlusButtonReact = require('./CreateEvent/PlusButton.react.jsx');
 
 var _PlusButtonReact2 = _interopRequireDefault(_PlusButtonReact);
 
+var _LogoReact = require('./Logo/Logo.react.jsx');
+
+var _LogoReact2 = _interopRequireDefault(_LogoReact);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19659,34 +19663,46 @@ var Main = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: '' },
-        _react2.default.createElement(_HeaderReact2.default, null),
         _react2.default.createElement(
           'div',
-          { className: "modal " + isActive },
-          _react2.default.createElement('div', { className: 'modal-background' }),
+          { className: 'columns branding' },
           _react2.default.createElement(
             'div',
-            { className: 'modal-container' },
-            _react2.default.createElement(
-              'div',
-              { ref: 'modalContent', className: 'modal-content' },
-              this.state.modal
-            )
-          ),
-          _react2.default.createElement('button', { className: 'modal-close', onClick: this.closeEvent.bind(this) })
+            { className: 'column is-4 is-offset-4' },
+            _react2.default.createElement(_LogoReact2.default, null)
+          )
         ),
         _react2.default.createElement(
           'div',
-          { className: 'columns' },
-          _react2.default.createElement(_EventListReact2.default, { events: this.state.data, error: this.state.error }),
-          _react2.default.createElement(
-            'div',
-            { className: 'column is-1 is-offset-3 add_event' },
-            _react2.default.createElement(_PlusButtonReact2.default, { onClick: this.addNewEvent.bind(this) })
-          )
+          { className: 'columns single-centered' },
+          _react2.default.createElement(_EventListReact2.default, { events: this.state.data, error: this.state.error })
         )
       );
     }
+    // render() {
+    //   let isActive = this.state.newEventActive ? "is-active" : "";
+    //   return(
+    //     <div className="">
+    //       <Header />
+    //       <div className={"modal " + isActive}>
+    //         <div className="modal-background"></div>
+    //         <div className="modal-container">
+    //           <div ref="modalContent" className="modal-content">
+    //             {this.state.modal}
+    //           </div>
+    //         </div>
+    //         <button className="modal-close" onClick={this.closeEvent.bind(this)}></button>
+    //       </div>
+    //       <div className="columns">
+    //         <EventList events={this.state.data} error={this.state.error}/>
+    //         <div className="column is-1 is-offset-3 add_event">
+    //           <PlusButton onClick={this.addNewEvent.bind(this)}/>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   );
+    // }
+
   }]);
 
   return Main;
@@ -19694,7 +19710,7 @@ var Main = function (_React$Component) {
 
 module.exports = Main;
 
-},{"./CreateEvent/CreateEvent.react.jsx":160,"./CreateEvent/PlusButton.react.jsx":161,"./Events/EventList.react.jsx":165,"./Header/Header.react.jsx":166,"react":159,"react-dom":30}],169:[function(require,module,exports){
+},{"./CreateEvent/CreateEvent.react.jsx":160,"./CreateEvent/PlusButton.react.jsx":161,"./Events/EventList.react.jsx":165,"./Header/Header.react.jsx":166,"./Logo/Logo.react.jsx":167,"react":159,"react-dom":30}],169:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
