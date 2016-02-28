@@ -131,7 +131,7 @@ class Main extends React.Component {
       newEventActive : false,
       modal: <CreateEvent close={this.closeEvent.bind(this)} />
     }
-    getData()
+    this.getData()
   }
 
   getData() {

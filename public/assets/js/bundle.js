@@ -19683,7 +19683,7 @@ var Main = function (_React$Component) {
       newEventActive: false,
       modal: _react2.default.createElement(_CreateEventReact2.default, { close: _this.closeEvent.bind(_this) })
     };
-    getData();
+    _this.getData();
     return _this;
   }
 
