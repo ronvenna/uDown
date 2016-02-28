@@ -19198,11 +19198,9 @@ var AttendeeList = function (_React$Component) {
   _createClass(AttendeeList, [{
     key: 'render',
     value: function render() {
-      console.log(JSON.parse(JSON.stringify(this.props)));
       var attendees = this.props.attendees.map(function (attendee, i) {
         return _react2.default.createElement(_AttendeeReact2.default, { key: "attendee" + i, attendee: attendee });
       });
-      console.log(attendees);
       return _react2.default.createElement(
         'div',
         null,
@@ -19321,11 +19319,9 @@ var EventList = function (_React$Component) {
   _createClass(EventList, [{
     key: 'render',
     value: function render() {
-      console.log(this.props);
       var events = this.props.events.map(function (event, i) {
         return _react2.default.createElement(_EventCardReact2.default, { key: "Event" + i, event: event });
       });
-      console.log(events);
       return _react2.default.createElement(
         'div',
         { className: 'column is-4 is-offset-4' },
